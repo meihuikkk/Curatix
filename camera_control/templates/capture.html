@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capturing...</title>
+</head>
+<body>
+    <h2>Image capture running</h2>
+    <div id="timer"></div>
+
+    <script>
+        var countdownDate = new Date().getTime() + (120 * 1000); // 10 seconds from now
+
+        var countdownInterval = setInterval(function() {
+            var now = new Date().getTime();
+
+            var timeRemaining = countdownDate - now;
+            var seconds = Math.floor(timeRemaining / 1000);
+
+            document.getElementById("timer").innerHTML = "Remaining time: " + seconds + "s ";
+
+            if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("timer").innerHTML = "Capture finished";
+            }
+        }, 1000); // Update every second
+    </script>
+</body>
+</html>

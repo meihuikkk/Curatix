@@ -1,0 +1,18 @@
+.box-wrapper {
+  display: flex;
+  width: 83px;
+  height: 82px;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  /* background-color: rgba(67, 80, 175, .3); */
+}
+.active {
+  background-color: rgba(230, 21, 99, 0.3)
+}
+
+.box-wrapper>div {
+  width: 50%;
+  height: 50%;
+}
